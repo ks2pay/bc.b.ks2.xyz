@@ -1,37 +1,31 @@
-## Welcome to GitHub Pages
+##BC群组服务器使用本插件子服配置教程
 
-You can use the [editor on GitHub](https://github.com/ks2pay/bc.b.ks2.xyz/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+###比如您购买了一个授权给主服：【play.ks2.xyz 】
+###但是您现在还有以下几个子服：
+>####1：[bc1.ks2.xyz]
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+>####2：[bc2.ks2.xyz]
 
-### Markdown
+>####3：......
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+###【本教程实现原理】：将每个BC子服看作是多个不同的服务器
 
-```markdown
-Syntax highlighted code block
+设置教程：
 
-# Header 1
-## Header 2
-### Header 3
+####1：从 http://buy.oa5.xyz/ 再购买两个(多个)授权，授权的ip分别为
+###[bc1.ks2.xyz]和[bc2.ks2.xyz]
 
-- Bulleted
-- List
+####2：在bc1子服的插件配置文件设置ip为bc1.ks2.xyz
 
-1. Numbered
-2. List
+####在bc2子服的插件配置文件设置ip为bc2.ks2.xyz
 
-**Bold** and _Italic_ and `Code` text
+####[如有多个子服，请以此类推......]
 
-[Link](url) and ![Image](src)
-```
+####3：在云商城里设置商品下单后提交到不同的服务器
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+####比如bc1服设置的url就是：
+`http://api.ks2.xyz/?ip=bc1.ks2.xyz&send=plugins&key=xxx&command=xxx`
 
-### Jekyll Themes
+####那么bc2服设置的url就是：
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/ks2pay/bc.b.ks2.xyz/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+`http://api.ks2.xyz/?ip=bc2.ks2.xyz&send=plugins&key=xxx&command=xxx`
